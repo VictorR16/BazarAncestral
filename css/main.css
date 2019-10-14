@@ -22,6 +22,10 @@ body{
     display: none;
 }
 
+#login{
+    display: none;
+}
+
 #iconUSLM{
     position: absolute;
     margin-top: 14%;
@@ -162,3 +166,4 @@ body{
     color: #715638;
     font-size: 12pt;
   }
+

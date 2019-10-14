@@ -33,7 +33,8 @@
                 onclick="changeSection('createAccount','screenLoginMain')">
             <br>
             <br>
-            <input type="button" class="btnSLM" value="Ingresar a mi cuenta">
+            <input type="button" class="btnSLM" value="Ingresar a mi cuenta"
+            onclick="changeSection('login','screenLoginMain')">
 
         </div>
 
@@ -90,6 +91,40 @@
                 Puedes empezar a publicar tus productos
             </p>
         </div>
+    </section>
+    <section id="login">
+        <div id="containerInfoSCA">
+            <div>
+                <img id="iconUSLM" src="img/IconoUser.png">
+            </div>
+            <div>
+                <p id="titleSLM">
+                    ¿Quieres vender?
+                </p>
+                <a id="contentSLM">Configura tu cuenta para
+                    <br>
+                    publicar tus productos.
+                </a>
+            </div>
+
+        </div>
+
+        <div id="containerElementsCA">
+            <p id="contentCreateAccount">
+                ¡Hola!<br>
+                Ingresa a tu cuenta para <br>
+                publicar tus productos
+            </p>
+
+            <form onsubmit=" return userLogin()">
+                <input type="email" class="inputCA iconEmail" placeholder="Email" required>
+                <br>
+                <input type="password" class="inputCA iconPassword" placeholder="Contraseña" minlength="8" required>
+                <br>
+                <br>
+                <input type="submit" id="btnCA" class="btnSLM" value="Ingresar a mi cuenta">
+
+            </form>
     </section>
 
     <script src="js/main.js"></script>
