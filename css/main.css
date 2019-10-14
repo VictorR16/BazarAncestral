@@ -39,6 +39,14 @@ body{
     margin-top: -5%
 }
 
+#containerInfoSCA{
+    position: absolute;
+    background-color: #F4F1E1;
+    width: 100%;
+    height: 25%;
+    margin-top: -65%
+}
+
 #titleSLM{
     position: absolute;
     padding-top: 7%;
@@ -84,8 +92,8 @@ body{
 #contentCreateAccount{
     font-family: 'MarketFresh';
     position: relative;
-    top: 165px;
-    left: -11px;
+    top: -25px;
+    left: -25px;
     text-align: center;
     color: #715638;
     font-size: 14pt;
@@ -96,6 +104,7 @@ body{
     margin-left: 15%;
     margin-top: 65%;
     padding-bottom: 100px;
+    display: block;
 }
 
 .inputCA{
@@ -132,4 +141,24 @@ body{
   #btnCA{
       position: relative;
       left: 10px;
+  }
+
+  #containerElementsCASucefull{
+      display: none;
+      position: relative;
+  }
+
+  #imgCASucefull{
+    position: relative;
+    width: 15%;
+    margin-left: 43%;
+    margin-top: 60%;
+  }
+
+  #textCASucefull{
+    position: relative;
+    text-align: center;
+    font-family: 'MarketFresh';
+    color: #715638;
+    font-size: 12pt;
   }

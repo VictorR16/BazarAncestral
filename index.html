@@ -46,7 +46,7 @@
 
     </section>
     <section id="createAccount">
-        <div id="containerInfoSLM">
+        <div id="containerInfoSCA">
             <div>
                 <img id="iconUSLM" src="img/IconoUser.png">
             </div>
@@ -61,24 +61,34 @@
             </div>
 
         </div>
-        <p id="contentCreateAccount">
-            ¡Hola!<br>
-            Crea una cuenta para <br>
-            publicar tus productos
-        </p>
+
         <div id="containerElementsCA">
-            <form onsubmit="">
+            <p id="contentCreateAccount">
+                ¡Hola!<br>
+                Crea una cuenta para <br>
+                publicar tus productos
+            </p>
+
+            <form onsubmit=" return createUserAccount()">
                 <input type="email" class="inputCA iconEmail" placeholder="Email" required>
                 <br>
                 <input type="text" class="inputCA iconUser" placeholder="Usuario" required>
                 <br>
-                <input type="password" class="inputCA iconPassword" placeholder="Contraseña" required>
+                <input type="password" class="inputCA iconPassword" placeholder="Contraseña" minlength="8" required>
                 <br>
                 <br>
                 <input type="submit" id="btnCA" class="btnSLM" value="Crear mi cuenta">
 
             </form>
 
+        </div>
+        <div id="containerElementsCASucefull">
+            <img id="imgCASucefull" src="img/IconoOk.png">
+            <br>
+            <p id=textCASucefull>
+                ¡Cuenta creada con éxito! <br>
+                Puedes empezar a publicar tus productos
+            </p>
         </div>
     </section>
 
