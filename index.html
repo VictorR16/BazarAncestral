@@ -73,9 +73,10 @@
             <form onsubmit="return createUserAccount()">
                 <input id="emailCA" type="email" class="inputCA iconEmail" placeholder="Email" required>
                 <br>
-                <input id="userNameCA"type="text" class="inputCA iconUser" placeholder="Usuario" required>
+                <input id="userNameCA" type="text" class="inputCA iconUser" placeholder="Usuario" required>
                 <br>
-                <input id="passCA"type="password" class="inputCA iconPassword" placeholder="Contraseña" minlength="8" required>
+                <input id="passCA" type="password" class="inputCA iconPassword" placeholder="Contraseña" minlength="8"
+                    required>
                 <br>
                 <br>
                 <input type="submit" id="btnCA" class="btnSLM" value="Crear mi cuenta">
@@ -117,14 +118,43 @@
             </p>
 
             <form onsubmit=" return userLogin()">
-                <input id="emailLogin"type="email" class="inputCA iconEmail" placeholder="Email" required>
+                <input id="emailLogin" type="email" class="inputCA iconEmail" placeholder="Email" required>
                 <br>
-                <input id="passLogin" type="password" class="inputCA iconPassword" placeholder="Contraseña" minlength="8" required>
+                <input id="passLogin" type="password" class="inputCA iconPassword" placeholder="Contraseña"
+                    minlength="8" required>
                 <br>
                 <br>
                 <input type="submit" id="btnCA" class="btnSLM" value="Ingresar a mi cuenta">
 
             </form>
+    </section>
+    <section id="viewProducts">
+        <div>
+            <img id="logoProducts" src="img/Logo.png">
+        </div>
+        <img id="imgPromotional" src="img/piezaPromocionalHome.jpg">
+        <table id="tableProducts">
+            <tr>
+                <td class="tdTable">
+                    <div class="containerProducts">
+                       <img class="imgProducts" src="img/Collares.png"> 
+                       <h4>Collar</h4>
+                       <p>$100.000</p>
+                    </div>
+                    
+                </td>
+                <td class="tdTable">
+                    <div class="containerProducts">
+                        <img class="imgProducts" src="img/Mochila.png">
+                        <h4>Bolso</h4>
+                       <p>$100.000</p>
+                    </div>
+
+                </td>
+            </tr>
+        </table>
+
+
     </section>
 
     <script src="js/main.js"></script>
@@ -155,13 +185,13 @@
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
         firebase.analytics();
-    //Make auth and firestore references
-    const auth = firebase.auth();
-    const db = firebase.firestore();
+        //Make auth and firestore references
+        const auth = firebase.auth();
+        const db = firebase.firestore();
 
     </script>
 
-    
+
 
 
 

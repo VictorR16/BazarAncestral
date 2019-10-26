@@ -167,3 +167,38 @@ body{
     font-size: 12pt;
   }
 
+
+
+  #logoProducts{
+    position: relative;
+    width: 35%;
+    padding-top: 20px;
+    padding-left: 30%;
+  }
+
+  #imgPromotional{
+    position: relative;
+    width: 100%;
+    padding-top: 12px;
+  }
+
+  #tableProducts{
+      padding-left: 5px;
+      padding-right: 5px;
+  }
+
+  .tdTable{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+  .imgProducts{
+    width: 100%;
+    height: 25%;
+  }
+  
+  .containerProducts{
+    width: 133px;
+    height: 670px;
+  }
+

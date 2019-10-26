@@ -35,7 +35,7 @@ function userLogin(){
     let password = document.getElementById('passLogin').value;
 
     auth.signInWithEmailAndPassword(email, password).then(function (){
-        alert('Correcto');
+        changeSection('viewProducts','login');
 
     }).catch(function(error) {
         // Handle Errors here.
