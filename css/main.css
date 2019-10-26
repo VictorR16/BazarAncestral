@@ -167,13 +167,15 @@ body{
     font-size: 12pt;
   }
 
-
+  #viewProducts{
+    background-color: #F4F1E1;
+  }
 
   #logoProducts{
     position: relative;
     width: 35%;
     padding-top: 20px;
-    padding-left: 30%;
+    padding-left: 14%;
   }
 
   #imgPromotional{
@@ -185,20 +187,97 @@ body{
   #tableProducts{
       padding-left: 5px;
       padding-right: 5px;
+      padding-top: 15px;
+      padding-bottom: 15px;
   }
 
   .tdTable{
-    padding-right: 10px;
-    padding-left: 10px;
+    background-color: white;
+    border-radius: 10px 10px 10px 10px;
+    padding-bottom: 30px;
 }
 
   .imgProducts{
     width: 100%;
-    height: 25%;
+    height: 70%;
+    border-radius: 15px 15px 15px 15px;
   }
   
   .containerProducts{
     width: 133px;
-    height: 670px;
+    height: 255px;
+    padding-left: 7px;
+    padding-right: 7px;
   }
 
+  .nameProducts{
+    font-family: MarketFresh;
+    color: #715638;
+    padding-left: 10px;
+  }
+
+  .priceProducts{
+    font-family: MarketFresh;
+    padding-left: 10px;
+  }
+
+#containerBtns{
+    padding-top: 13px;
+    width: 100%;
+    height: 20px;
+    border-top: solid 1px #715638;
+}
+
+
+.imgBtnMenusProducts{
+    padding-right: 35px;
+    padding-left: 35px;
+    width: 8%;
+    
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  #menuBurger{
+    padding-left: 20px;
+    width: 10%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }

@@ -130,6 +130,15 @@
     </section>
     <section id="viewProducts">
         <div>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+            </div>
+            <img id="menuBurger"src="img/menuHamburguesa.png" onclick="openNav()">
+
             <img id="logoProducts" src="img/Logo.png">
         </div>
         <img id="imgPromotional" src="img/piezaPromocionalHome.jpg">
@@ -137,22 +146,27 @@
             <tr>
                 <td class="tdTable">
                     <div class="containerProducts">
-                       <img class="imgProducts" src="img/Collares.png"> 
-                       <h4>Collar</h4>
-                       <p>$100.000</p>
+                        <img class="imgProducts" src="img/Collares.png">
+                        <h4 class="nameProducts">Collar</h4>
+                        <p class="priceProducts">$100.000</p>
                     </div>
-                    
+
                 </td>
                 <td class="tdTable">
                     <div class="containerProducts">
                         <img class="imgProducts" src="img/Mochila.png">
-                        <h4>Bolso</h4>
-                       <p>$100.000</p>
+                        <h4 class="nameProducts">Bolso</h4>
+                        <p class="priceProducts">$100.000</p>
                     </div>
 
                 </td>
             </tr>
         </table>
+        <div id="containerBtns">
+            <img class="imgBtnMenusProducts" src="img/iconoHome.png">
+            <img class="imgBtnMenusProducts" src="img/iconoProductos.png">
+            <img class="imgBtnMenusProducts" src="img/iconoUbicación.png">
+        </div>
 
 
     </section>
