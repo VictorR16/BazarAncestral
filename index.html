@@ -92,7 +92,8 @@
                 ¡Cuenta creada con éxito! <br>
                 Puedes empezar a publicar tus productos
             </p>
-            <input id="btnCaSucefull" class="btnSLM btnCA" type="button" onclick="changeSection('login', 'containerElementsCASucefull');" value="ok">
+            <input id="btnCaSucefull" class="btnSLM btnCA" type="button"
+                onclick="changeSection('login', 'containerElementsCASucefull');" value="ok">
         </div>
     </section>
     <section id="login">
@@ -145,7 +146,8 @@
                 <a href="#" onclick="categorie(5)">Mochilas</a>
 
                 <img id="mbimgUser" src="img/MenuBurgerUsuarios.png">
-                <a href="#" class="mbtitle">¿Quieres vender? <br> Contáctanos</a>
+                <a href="#" onclick="changeSection('doYouWantToSell','viewProducts'), closeNav()"
+                    class="mbtitle">¿Quieres vender? <br> Contáctanos</a>
 
             </div>
             <img id="menuBurger" src="img/menuHamburguesa.png" onclick="openNav()">
@@ -165,9 +167,56 @@
 
 
     </section>
-<section id="screenLoading">
-    <img id="loading"src="img/pantallaCarga.gif">
-</section>
+    <section id="screenLoading">
+        <img id="loading" src="img/pantallaCarga.gif">
+    </section>
+
+    <section id="doYouWantToSell">
+        <div id="containerElementsVP">
+            <img id="btnBackWTS" src="img/MenuBurgerAtras.png"
+                onclick="changeSection('viewProducts','doYouWantToSell')">
+
+            <img id="logoProducts" src="img/Logo.png">
+        </div>
+        <div id="containerElementsWantToSell">
+            <br>
+            <br>
+            <p id="titleWTS">¿Quieres vender? <br> Contáctanos </p>
+            <p>Enviamos un mensaje y nos <br> pondremos en contacto contigo</p>
+            <form>
+                <a class="titleElementsWTS">Nombre y apellido</a>
+                <br>
+                <br>
+                <input id="nameWTS" type="text" class="inputCA " placeholder="Nombre y apellido" required>
+                <br>
+                <br>
+                <a class="titleElementsWTS">Correo</a>
+                <br>
+                <br>
+                <input id="emailWTS" type="email" class="inputCA " placeholder="nombre@email.com" required>
+                <br>
+                <br>
+                <a class="titleElementsWTS">Celular</a>
+                <br>
+                <br>
+                <input id="numberWTS" type="number" class="inputCA " placeholder="xxxxxxxxxx" required>
+                <br>
+                <br>
+                <a class="titleElementsWTS">Mensaje </a>
+                <br>
+                <br>
+                <input id="msgWTS" type="text" class="inputCA" placeholder="Mensaje" required>
+                <br>
+                <br>
+                <br>
+                <input type="submit" class="btnSLM btnCA" value="Enviar">
+            </form>
+
+
+        </div>
+
+
+    </section>
     <script src="js/main.js"></script>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-app.js"></script>
