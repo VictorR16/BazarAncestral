@@ -80,7 +80,7 @@
                     required>
                 <br>
                 <br>
-                <input type="submit" id="btnCA" class="btnSLM" value="Crear mi cuenta">
+                <input type="submit" class="btnSLM btnCA" value="Crear mi cuenta">
 
             </form>
 
@@ -125,22 +125,23 @@
                     minlength="8" required>
                 <br>
                 <br>
-                <input type="submit" id="btnCA" class="btnSLM" value="Ingresar a mi cuenta">
+                <input type="submit" class="btnSLM btnCA" value="Ingresar a mi cuenta">
 
             </form>
     </section>
     <section id="viewProducts">
-        <div>
+        <div id="containerElementsVP">
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
                     <img id="mbimgAtras" src="img/MenuBurgerAtras.png">
                 </a>
                 <img id="mbimgCategorias" src="img/MenuBurgerIcono.png">
                 <p class="mbtitle">Categorías</p>
-                <a href="#">Collares</a>
-                <a href="#">Aretas</a>
-                <a href="#">Manillas</a>
-                <a href="#">Mochilas</a>
+                <a href="#" onclick="categorie(1)">Todos</a>
+                <a href="#" onclick="categorie(2)">Collares</a>
+                <a href="#" onclick="categorie(3)">Aretas</a>
+                <a href="#" onclick="categorie(4)">Manillas</a>
+                <a href="#" onclick="categorie(5)">Mochilas</a>
 
                 <img id="mbimgUser" src="img/MenuBurgerUsuarios.png">
                 <a href="#" class="mbtitle">¿Quieres vender? <br> Contáctanos</a>
@@ -150,19 +151,22 @@
 
             <img id="logoProducts" src="img/Logo.png">
         </div>
+        <p id="categorieName">Todos</p>
         <img id="imgPromotional" src="img/piezaPromocionalHome.jpg">
         <table id="tableProducts">
             <!-- Generado dinamicamente -->
         </table>
-        <div id="containerBtns">
+        <!-- <div id="containerBtns">
             <img class="imgBtnMenusProducts" src="img/iconoHome.png">
             <img class="imgBtnMenusProducts" src="img/iconoProductos.png">
             <img class="imgBtnMenusProducts" src="img/iconoUbicación.png">
-        </div>
+        </div> -->
 
 
     </section>
-
+<section id="screenLoading">
+    <img id="loading"src="img/pantallaCarga.gif">
+</section>
     <script src="js/main.js"></script>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-app.js"></script>

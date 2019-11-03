@@ -10,7 +10,6 @@ window.onload = function () {
             .then(products => {
                 products.forEach(doc => {
                     data = doc.data()
-                    
                     products_showcase.innerHTML += 
                     '<tr id="products-info">'+
                         '<td class="tdTable">'+
