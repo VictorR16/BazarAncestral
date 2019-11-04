@@ -269,20 +269,16 @@
                                         showSlides(slideIndex = n);
                                     }
 
-                                    function showSlides(n) {
+                                    function showSlides() {
                                         var i;
                                         var slides = document.getElementsByClassName("mySlides");
-                                        var dots = document.getElementsByClassName("dot");
-                                        if (n > slides.length) { slideIndex = 1 }
-                                        if (n < 1) { slideIndex = slides.length }
                                         for (i = 0; i < slides.length; i++) {
                                             slides[i].style.display = "none";
                                         }
-                                        for (i = 0; i < dots.length; i++) {
-                                            dots[i].className = dots[i].className.replace(" active", "");
-                                        }
+                                        slideIndex++;
+                                        if (slideIndex > slides.length) { slideIndex = 1 }
                                         slides[slideIndex - 1].style.display = "block";
-                                        dots[slideIndex - 1].className += " active";
+                                        setTimeout(showSlides, 2000); // Change image every 2 seconds
                                     }
                                 </script>
                             </center>
@@ -303,31 +299,31 @@
                                 coocimientos
                             </h6>
                         </td>
-
                     </tr>
                     <tr>
                         <td>
-                            <h6 class="textModalM">Costo: $100.000</h6>
+                            <img src="img/Precio.png" class="imgModalMini">
+                            <h6 class="textModalM">$100.000</h6>
                         </td>
                     </tr>
                     <tr>
-
                         <td>
+                            <img src="img/IconoUser.png" class="imgModalMini">
                             <h6 class="textModalM">Vendedor: Johnny</h6>
                         </td>
                     </tr>
                     <tr>
                         <td>
+                            <img src="img/Ubicación.png" class="imgModalMini">
                             <h6 class="textModalM">Ubicación de entrega: Estación Poblado del Metro </h6>
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <a href="https://api.whatsapp.com/send?phone=+57 3014860233&text=Hola, me interesa un producto que vi en el bazar ancestral"
-                                class="btn modal-trigger red" target="_blank">Contacto</a>
+                                class="btn modal-trigger green" target="_blank">Contacto</a>
                         </td>
                     </tr>
-
                 </table>
 
 
