@@ -300,7 +300,8 @@ body{
   .modal { 
     max-height: 90%; 
     max-width: 90%;
-    overflow: visible
+    overflow: visible;
+    width: 85%;
   }
 
   #tableModal{
