@@ -84,6 +84,7 @@ function categorie(number) {
 
     switch (number) {
         case 1:
+            requestEspcificProduct(number);
             banner.style.backgroundColor = '#F4F1E1';
             categorie.innerHTML = "Todos";
             categorie.style.color = '#000000';
@@ -91,6 +92,7 @@ function categorie(number) {
             menuBurger.src = "img/menuHamburguesa.png"
             break;
         case 2:
+            requestEspcificProduct(number);
             banner.style.backgroundColor = '#6E5738';
             categorie.innerHTML = "Collares";
             categorie.style.color = '#6E5738';
@@ -98,6 +100,7 @@ function categorie(number) {
             menuBurger.src = "img/menuBurgerBlanco.png"
             break;
         case 3:
+            requestEspcificProduct(number);
             banner.style.backgroundColor = '#17AF9C';
             categorie.innerHTML = "Aretas";
             categorie.style.color = '#17AF9C';
@@ -105,6 +108,7 @@ function categorie(number) {
             menuBurger.src = "img/menuBurgerBlanco.png"
             break;
         case 4:
+            requestEspcificProduct(number);
             banner.style.backgroundColor = '#B62527';
             categorie.innerHTML = "Manillas";
             categorie.style.color = '#B62527';
@@ -112,6 +116,7 @@ function categorie(number) {
             menuBurger.src = "img/menuBurgerBlanco.png"
             break;
         case 5:
+            requestEspcificProduct(number);
             banner.style.backgroundColor = '#D8A629';
             categorie.innerHTML = "Mochilas";
             categorie.style.color = '#D8A629';
