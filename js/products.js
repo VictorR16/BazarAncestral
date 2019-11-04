@@ -123,7 +123,7 @@ function setInfo(data, products_showcase, counter) {
             '<td class="tdTable">'+
                 '<div class="containerProducts">'+
                     '<img class="imgProducts" src="'+data.image+'">'+
-                    '<h4 class="nameProducts">'+data.name+'</h4>'+
+                    '<a href="#MDL01" class="btn modal-trigger red"  onclick="fillModal('+'\''+String(data.name)+'\''+')">'+data.name+'</a>'+
                     '<p class="priceProducts">'+data.price+'</p>'+
                 '</div>'+
             '</td>'+
@@ -136,9 +136,59 @@ function setInfo(data, products_showcase, counter) {
             '<td class="tdTable">'+
                 '<div class="containerProducts">'+
                     '<img class="imgProducts" src="'+data.image+'">'+
-                    '<h4 class="nameProducts">'+data.name+'</h4>'+
+                    '<a href="#MDL01" class="btn modal-trigger red"  onclick="fillModal('+'\''+String(data.name)+'\''+')">'+data.name+'</a>'+
                     '<p class="priceProducts">'+data.price+'</p>'+
                 '</div>'+
             '</td>';
     }
+}
+
+function fillModal(name) {
+
+    let title;
+    let body;
+    let price;
+    let owner_name;
+    let phone;
+
+    const db = firebase.firestore();
+    const productsRef = db.collection('products');
+
+    const product = productsRef.where('name', '==', name);
+
+    product.get()
+    .then(products => {
+        products.forEach(doc => {
+            data = doc.data()
+
+            title = data.name;
+            body = data.description;
+            price = data.price;
+            
+            if (data.owner) {
+
+                data.owner.get()
+                .then(owner_item => { 
+                    owner_info = owner_item.data();
+
+                    owner_name = owner_info.name;
+                    phone = owner_info.phone;
+
+                    document.getElementById("modal-title").innerHTML = title;
+                    document.getElementById("modal-body").innerHTML = body;
+                    document.getElementById("modal-price").innerHTML = price;
+                    document.getElementById("modal-owner").innerHTML = owner_name;
+                    document.getElementById("wpp-link").href = 
+                    "https://api.whatsapp.com/send?phone=+57"+phone+"&text=Hola, me interesa un producto que vi en el bazar ancestral. "+
+                    "Producto: "+owner_name;
+
+                })
+                .catch(err => console.error(err));
+            }
+
+        });
+    })
+
+   
+
 }
