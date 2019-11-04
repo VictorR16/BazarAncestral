@@ -304,16 +304,15 @@
                                         showSlides(slideIndex = n);
                                     }
 
-                                    function showSlides() {
+                                    function showSlides(n) {
                                         var i;
                                         var slides = document.getElementsByClassName("mySlides");
+                                        if (n > slides.length) { slideIndex = 1 }
+                                        if (n < 1) { slideIndex = slides.length }
                                         for (i = 0; i < slides.length; i++) {
                                             slides[i].style.display = "none";
                                         }
-                                        slideIndex++;
-                                        if (slideIndex > slides.length) { slideIndex = 1 }
                                         slides[slideIndex - 1].style.display = "block";
-                                        setTimeout(showSlides, 5000); // Change image every 2 seconds
                                     }
                                 </script>
                             </center>
@@ -353,7 +352,8 @@
                     </tr>
                     <tr>
                         <td>
-                            <a id="wpp-link" href="https://api.whatsapp.com/send?phone=+573014860233&text=Hola, me interesa un producto que vi en el bazar ancestral"
+                            <a id="wpp-link"
+                                href="https://api.whatsapp.com/send?phone=+573014860233&text=Hola, me interesa un producto que vi en el bazar ancestral"
                                 class="btn modal-trigger red" target="_blank">Contacto</a>
                         </td>
                     </tr>
