@@ -183,7 +183,7 @@ function fillModal(name) {
                     document.getElementById("img-2").src = data.images[2];
                     document.getElementById("wpp-link").href = 
                     "https://api.whatsapp.com/send?phone=+57"+phone+"&text=Hola, me interesa un producto que vi en el bazar ancestral. "+
-                    "Producto: "+owner_name;
+                    "Producto: "+title;
 
                 })
                 .catch(err => console.error(err));
