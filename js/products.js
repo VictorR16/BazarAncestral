@@ -122,7 +122,7 @@ function setInfo(data, products_showcase, counter) {
         '<tr id="products-info-'+(counter + 1)+'">'+
             '<td class="tdTable">'+
                 '<div class="containerProducts">'+
-                    '<img class="imgProducts" src="'+data.image+'">'+
+                    '<img class="imgProducts" src="'+data.images[0]+'">'+
                     '<a href="#MDL01" class="btn modal-trigger red"  onclick="fillModal('+'\''+String(data.name)+'\''+')">'+data.name+'</a>'+
                     '<p class="priceProducts">'+data.price+'</p>'+
                 '</div>'+
@@ -135,7 +135,7 @@ function setInfo(data, products_showcase, counter) {
         row_product.innerHTML +=              
             '<td class="tdTable">'+
                 '<div class="containerProducts">'+
-                    '<img class="imgProducts" src="'+data.image+'">'+
+                    '<img class="imgProducts" src="'+data.images[0]+'">'+
                     '<a href="#MDL01" class="btn modal-trigger red"  onclick="fillModal('+'\''+String(data.name)+'\''+')">'+data.name+'</a>'+
                     '<p class="priceProducts">'+data.price+'</p>'+
                 '</div>'+
@@ -166,7 +166,7 @@ function fillModal(name) {
             price = data.price;
             
             if (data.owner) {
-
+                
                 data.owner.get()
                 .then(owner_item => { 
                     owner_info = owner_item.data();
@@ -178,6 +178,9 @@ function fillModal(name) {
                     document.getElementById("modal-body").innerHTML = body;
                     document.getElementById("modal-price").innerHTML = price;
                     document.getElementById("modal-owner").innerHTML = owner_name;
+                    document.getElementById("img-0").src = data.images[0];
+                    document.getElementById("img-1").src = data.images[1];
+                    document.getElementById("img-2").src = data.images[2];
                     document.getElementById("wpp-link").href = 
                     "https://api.whatsapp.com/send?phone=+57"+phone+"&text=Hola, me interesa un producto que vi en el bazar ancestral. "+
                     "Producto: "+owner_name;
