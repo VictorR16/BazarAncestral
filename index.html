@@ -168,19 +168,25 @@
             <!-- Generado dinamicamente -->
             <tr>
                 <td class="tdTable">
-                    <div class="containerProducts">
-                        <img class="imgProducts" src="img/Collares.png">
-                        <a href="#MDL01" class="btn modal-trigger red">Collar</a>
-                        <p class="priceProducts">$100.000</p>
-                    </div>
+                    <center>
+                        <div class="containerProducts">
+                            <img class="imgProducts" src="img/Collares.png">
+                            <a href="#MDL01" class="btn modal-trigger red">Collar</a>
+                            <p class="priceProducts">$100.000</p>
+                        </div>
+                    </center>
+
 
                 </td>
                 <td class="tdTable">
-                    <div class="containerProducts">
-                        <img class="imgProducts" src="img/Mochila.png">
-                        <a href="#MDL02" class="btn modal-trigger blue">Bolso</a>
-                        <p class="priceProducts">$100.000</p>
-                    </div>
+                    <center>
+                        <div class="containerProducts">
+                            <img class="imgProducts" src="img/Mochila.png">
+                            <a href="#MDL02" class="btn modal-trigger blue">Bolso</a>
+                            <p class="priceProducts">$100.000</p>
+                        </div>
+                    </center>
+
 
                 </td>
             </tr>
@@ -302,10 +308,10 @@
 
                                     <!-- Next and previous buttons -->
                                     <div class="nextPrev">
-                                        <a  class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                                        <a  class="next" onclick="plusSlides(1)">&#10095;</a>
+                                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
                                     </div>
-                                    
+
                                 </div>
                                 <br>
                                 <script>
@@ -322,15 +328,16 @@
                                         showSlides(slideIndex = n);
                                     }
 
-                                    function showSlides(n) {
+                                    function showSlides() {
                                         var i;
                                         var slides = document.getElementsByClassName("mySlides");
-                                        if (n > slides.length) { slideIndex = 1 }
-                                        if (n < 1) { slideIndex = slides.length }
                                         for (i = 0; i < slides.length; i++) {
                                             slides[i].style.display = "none";
                                         }
+                                        slideIndex++;
+                                        if (slideIndex > slides.length) { slideIndex = 1 }
                                         slides[slideIndex - 1].style.display = "block";
+                                        setTimeout(showSlides, 5000); // Change image every 2 seconds
                                     }
                                 </script>
                             </center>
@@ -339,41 +346,39 @@
                     </tr>
                     <tr>
                         <td>
-                            <h6 id="modal-title" class="textModal">Collar</h6>
+                            <h6 id="modal-title" class="textModal"></h6>
 
                         </td>
 
                     </tr>
                     <tr>
                         <td>
-                            <h6 id="modal-body" class="textModalM">Simboliza la unión cultural entre los pueblos que lleva a
-                                intercambiar
-                                coocimientos
+                            <h6 id="modal-body" class="textModalM">
                             </h6>
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <img src="img/Precio.png" class="imgModalMini">
-                            <h6 id="modal-price" class="textModalM">$100.000</h6>
+                            <h6 id="modal-price" class="textModalM"></h6>
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <img src="img/IconoUser.png" class="imgModalMini">
-                            <h6 id="modal-owner" class="textModalM">Vendedor: Johnny</h6>
+                            <h6 id="modal-owner" class="textModalM"></h6>
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <img src="img/Ubicación.png" class="imgModalMini">
-                            <h6 class="textModalM">Ubicación de entrega: Estación Poblado del Metro </h6>
+                            <h6 class="textModalM"></h6>
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <a id="wpp-link" href="https://api.whatsapp.com/send?phone=+573014860233&text=Hola, me interesa un producto que vi en el bazar ancestral"
-                                class="btn modal-trigger red" target="_blank">Contacto</a>
+                                class="btn modal-trigger red" target="_blank"></a>
                         </td>
                     </tr>
                 </table>
