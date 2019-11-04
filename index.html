@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bazar Ancestral</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <script type="text/javascript" src="js/materialize.js"></script>
+
     <link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
     <script src="js/main.js"></script>
     <script src="js/products.js"></script>
@@ -157,8 +165,27 @@
         </div>
         <p id="categorieName">Todos</p>
         <img id="imgPromotional" src="img/piezaPromocionalHome.jpg">
+
         <table id="tableProducts">
             <!-- Generado dinamicamente -->
+            <tr>
+                <td class="tdTable">
+                    <div class="containerProducts">
+                        <img class="imgProducts" src="img/Collares.png">
+                        <a href="#MDL01" class="btn modal-trigger red">Collar</a>
+                        <p class="priceProducts">$100.000</p>
+                    </div>
+
+                </td>
+                <td class="tdTable">
+                    <div class="containerProducts">
+                        <img class="imgProducts" src="img/Mochila.png">
+                        <a href="#MDL02" class="btn modal-trigger blue">Bolso</a>
+                        <p class="priceProducts">$100.000</p>
+                    </div>
+
+                </td>
+            </tr>
         </table>
         <!-- <div id="containerBtns">
             <img class="imgBtnMenusProducts" src="img/iconoHome.png">
@@ -251,6 +278,185 @@
 
     </script>
 
+
+    <div id="MDL01" class="modal">
+        <center>
+            <div class="modal-content">
+                <table id="tableModal">
+                    <tr>
+                        <td>
+                            <center>
+                                <!-- Slideshow container -->
+                                <div class="slideshow-container">
+
+                                    <!-- Full-width images with number and caption text -->
+                                    <div class="mySlides fade">
+                                        <div class="numbertext">1 / 3</div>
+                                        <img src="img/Collares.png" class="imgModal">
+                                    </div>
+
+                                    <div class="mySlides fade">
+                                        <div class="numbertext">2 / 3</div>
+                                        <img src="img/Collares2.png" class="imgModal">
+                                    </div>
+
+                                    <div class="mySlides fade">
+                                        <div class="numbertext">3 / 3</div>
+                                        <img src="img/Collares3.png" class="imgModal">
+                                    </div>
+
+                                    <!-- Next and previous buttons -->
+                                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                                </div>
+                                <br>
+
+                                <!-- The dots/circles -->
+                                <div style="text-align:center">
+                                    <span class="dot" onclick="currentSlide(1)"></span>
+                                    <span class="dot" onclick="currentSlide(2)"></span>
+                                    <span class="dot" onclick="currentSlide(3)"></span>
+                                </div>
+                                <script>
+
+                                    var slideIndex = 1;
+                                    showSlides(slideIndex);
+
+                                    // Next/previous controls
+                                    function plusSlides(n) {
+                                        showSlides(slideIndex += n);
+                                    }
+
+                                    // Thumbnail image controls
+                                    function currentSlide(n) {
+                                        showSlides(slideIndex = n);
+                                    }
+
+                                    function showSlides(n) {
+                                        var i;
+                                        var slides = document.getElementsByClassName("mySlides");
+                                        var dots = document.getElementsByClassName("dot");
+                                        if (n > slides.length) { slideIndex = 1 }
+                                        if (n < 1) { slideIndex = slides.length }
+                                        for (i = 0; i < slides.length; i++) {
+                                            slides[i].style.display = "none";
+                                        }
+                                        for (i = 0; i < dots.length; i++) {
+                                            dots[i].className = dots[i].className.replace(" active", "");
+                                        }
+                                        slides[slideIndex - 1].style.display = "block";
+                                        dots[slideIndex - 1].className += " active";
+                                    }
+                                </script>
+                            </center>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h6 class="textModal">Collar</h6>
+
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <h6 class="textModalM">Simboliza la unión cultural entre los pueblos que lleva a
+                                intercambiar
+                                coocimientos
+                            </h6>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <h6 class="textModalM">Costo: $100.000</h6>
+                        </td>
+                    </tr>
+                    <tr>
+
+                        <td>
+                            <h6 class="textModalM">Vendedor: Johnny</h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h6 class="textModalM">Ubicación de entrega: Estación Poblado del Metro </h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="https://api.whatsapp.com/send?phone=+57 3014860233&text=Hola, me interesa un producto que vi en el bazar ancestral"
+                                class="btn modal-trigger red" target="_blank">Contacto</a>
+                        </td>
+                    </tr>
+
+                </table>
+
+
+            </div>
+        </center>
+
+    </div>
+
+    <div id="MDL02" class="modal">
+        <div class="modal-content">
+            <table id="tableModal" WIDTH="300">
+                <tr>
+                    <td><img class="imgModal" src="img/Mochila.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 class="textModal">Bolso</h3>
+
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <h6 class="textModal">Simboliza la posibilidad de llevar materia prima entre los pueblos,
+                            que lleva a intercambiar conocimientos ancestrales
+                        </h6>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <h6 class="textModal">Costo: $400.000</h6>
+                    </td>
+                </tr>
+                <tr>
+
+                    <td>
+                        <h6 class="textModal">Vendedor: Carlos</h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h6 class="textModal">Ubicación de entrega: Estación Poblado del Metro </h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="btn disabled">Guardar producto</button>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <button class="btn disabled">Contactar</button>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="modal-footer">
+            <a href="" class="btn modal-close red">cerrar</a>
+        </div>
+
+    </div>
 
 
 

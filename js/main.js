@@ -1,9 +1,10 @@
+
+
 function changeSection(sectionIn, sectionOut) {
     document.getElementById(sectionIn).style.display = 'block';
     document.getElementById(sectionOut).style.display = 'none';
     charging(false);
 }
-
 function createUserAccount() {
     let emailUser = document.getElementById('emailCA').value;
     let userName = document.getElementById('userNameCA').value;
@@ -74,7 +75,10 @@ function charging(value) {
     }
 }
 
+function showProduct() {
 
+
+}
 
 function categorie(number) {
     let banner = document.getElementById("containerElementsVP");
