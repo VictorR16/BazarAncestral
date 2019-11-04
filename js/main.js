@@ -1,8 +1,9 @@
+
+
 function changeSection(sectionIn, sectionOut) {
     document.getElementById(sectionIn).style.display = 'block';
     document.getElementById(sectionOut).style.display = 'none';
 }
-
 function createUserAccount() {
     let emailUser = document.getElementById('emailCA').value;
     let userName = document.getElementById('userNameCA').value;
@@ -30,27 +31,38 @@ function createUserAccount() {
     return false;
 }
 
-function userLogin(){
+function userLogin() {
     let email = document.getElementById('emailLogin').value;
     let password = document.getElementById('passLogin').value;
 
-    auth.signInWithEmailAndPassword(email, password).then(function (){
-        changeSection('viewProducts','login');
+    auth.signInWithEmailAndPassword(email, password).then(function () {
+        changeSection('viewProducts', 'login');
 
-    }).catch(function(error) {
+    }).catch(function (error) {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
         // ...
-      });
+    });
 
-      return false;
+    return false;
 }
 
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
-  }
-  
-  function closeNav() {
+}
+
+function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
-  }
+}
+
+function showProduct() {
+
+
+}
+
+
+
+
+
+
