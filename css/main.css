@@ -201,7 +201,7 @@ body{
   #imgPromotional{
     position: relative;
     width: 100%;
-    padding-top: 12px;
+    padding-top: 0px;
   }
   #categorieName{
     text-align: center;
@@ -210,16 +210,20 @@ body{
     font-size: 20px;
   }
   #tableProducts{
-      padding-left: 5px;
-      padding-right: 5px;
+      width: 0px;
+      padding-left: 5%;
+      padding-right: 0px;
       padding-top: 15px;
       padding-bottom: 30px;
+      border-collapse: unset !important;
+      border-spacing: 15px !important;
   }
 
   .tdTable{
     background-color: white;
     border-radius: 10px 10px 10px 10px;
     padding-bottom: 30px;
+
 }
 
   .imgProducts{
@@ -246,6 +250,8 @@ body{
     height: 255px;
     padding-left: 7px;
     padding-right: 7px;
+    padding-top: 7px;
+    
   }
 
   .nameProducts{
