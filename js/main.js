@@ -58,6 +58,7 @@ function userLogin() {
 }
 
 function openNav() {
+    console.log("ok");
     document.getElementById("mySidenav").style.width = "250px";
 }
 

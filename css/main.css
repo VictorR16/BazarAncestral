@@ -71,6 +71,7 @@ body{
     padding-left: 27%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 11pt;
+    color:black;
 }
 
 #containerButtonsSLM{
@@ -119,11 +120,11 @@ body{
 }
 
 .inputCA{
-    border: solid 1px gray;
-    border-radius: 10px 10px 10px 10px;
-    width: 214px;
-    height: 50px;
-    padding-left: 15px;
+    border: solid 1px gray !important;
+    border-radius: 10px 10px 10px 10px !important;
+    width: 214px !important;
+    height: 50px !important;
+    padding-left: 15px !important;
     
 
 }
@@ -194,6 +195,7 @@ body{
     width: 35%;
     padding-top: 20px;
     padding-left: 19%;
+    box-sizing: unset !important;
   }
 
   #imgPromotional{
@@ -272,7 +274,7 @@ body{
     
 }
 
-.sidenav {
+.sidenav1 {
     height: 100%;
     width: 0;
     position: fixed;
@@ -286,38 +288,39 @@ body{
     text-align: center;
   }
   
-  .sidenav a {
-    padding: 8px 8px 8px 8px;
-    text-decoration: none;
-    font-size: 17px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
+  .sidenav1 a {
+    padding: 8px 8px 8px 8px ;
+    text-decoration: none ;
+    font-size: 17px ;
+    color: #818181 ;
+    display: block ;
+    transition: 0.3s ;
   }
   
-  .sidenav a:hover {
-    color: #f1f1f1;
+  .sidenav1 a:hover {
+    color: #4fc4d8;
+    background-color: #4fc4d8;
   }
   
-  .sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+  .sidenav1 .closebtn {
+    position: absolute ;
+    top: 0 ;
+    right: 25px ;
+    font-size: 36px ;
+    margin-left: 50px ;
   }
   
   @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 15px;}
+    .sidenav1 {padding-top: 15px;}
+    .sidenav1 a {font-size: 15px;}
   }
 
   #menuBurger{
-    position: relative;
-    right: -87%;
-    width: 10%;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    position: relative ;
+    right: -87% ;
+    width: 10% ;
+    padding-bottom: 10px ;
+    padding-top: 10px ;
   }
   .modal { 
     max-height: 90%; 
